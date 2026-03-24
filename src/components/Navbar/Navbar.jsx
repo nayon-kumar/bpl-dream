@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/BPL/logo.png";
 import { Link } from "react-router-dom";
 import { HiCurrencyDollar } from "react-icons/hi";
@@ -7,8 +7,22 @@ import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.addEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="relative">
+    <div className="relative" ref={menuRef}>
       <div className="flex justify-baseline gap-2 sm:justify-between bg-base-100 shadow-sm px-3 py-2">
         <div
           className="flex items-center sm:hidden"
@@ -52,27 +66,31 @@ const Navbar = () => {
         </div>
         {isOpen ? (
           <>
-            <div className="absolute top-18 left-0">
+            <div className="absolute top-18 left-0 bg-white">
               <div className="flex flex-col">
                 <Link
+                  onClick={() => setIsOpen(false)}
                   to="/"
                   className="hover:bg-primary hover:text-white px-5 py-2 rounded-md"
                 >
                   Home
                 </Link>
                 <Link
+                  onClick={() => setIsOpen(false)}
                   to="/"
                   className="hover:bg-primary hover:text-white px-5 py-2 rounded-md"
                 >
                   Fixture
                 </Link>
                 <Link
+                  onClick={() => setIsOpen(false)}
                   to="/"
                   className="hover:bg-primary hover:text-white px-5 py-2 rounded-md"
                 >
                   Teams
                 </Link>
                 <Link
+                  onClick={() => setIsOpen(false)}
                   to="/"
                   className="hover:bg-primary hover:text-white px-5 py-2 rounded-md"
                 >

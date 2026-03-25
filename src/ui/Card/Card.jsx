@@ -1,23 +1,42 @@
 import React from "react";
+import { FaUser } from "react-icons/fa";
+import { CiFlag1 } from "react-icons/ci";
 
-const Card = () => {
+const Card = ({ player }) => {
   return (
     <div>
       <div className="card bg-base-100 shadow-sm">
         <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes"
-          />
+          <img className="w-full" src={player.profile_image} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Card Title</h2>
-          <p>
-            A card component has a figure, a body part, and inside body there
-            are title and actions parts
-          </p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+          <h2 className="card-title">
+            <FaUser /> Card Title
+          </h2>
+          <div>
+            <div className="flex items-center justify-between">
+              <div className="flex gap-2 items-center">
+                <CiFlag1 size={25} />
+                <p className="text-[#131313]/50">India</p>
+              </div>
+              <div>
+                <p className="border-2 px-2 py-1 border-gray-200 bg-gray-100 rounded-sm">
+                  All-Rounder
+                </p>
+              </div>
+            </div>
+            <hr className="my-4 text-gray-300" />
+            <div>
+              <p className="font-bold mb-4">Rating</p>
+              <div className="flex items-center justify-between">
+                <p className="font-bold">Left-Hand-Bat</p>
+                <p className="text-right">Left-Hand-Bowl</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <p className="font-bold">Price: $1500000</p>
+            <button className="btn hover:btn-primary">Choose Player</button>
           </div>
         </div>
       </div>

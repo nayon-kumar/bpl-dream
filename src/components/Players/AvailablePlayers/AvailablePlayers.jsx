@@ -2,7 +2,6 @@ import React from "react";
 import Card from "../../../ui/Card/Card";
 
 const AvailablePlayers = ({ data }) => {
-  console.log(data);
   return (
     <div className="grid grid-cols-3 gap-5 mt-10">
       {data.map((player, index) => (

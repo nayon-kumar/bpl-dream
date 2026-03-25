@@ -5,9 +5,9 @@ import { CiFlag1 } from "react-icons/ci";
 const Card = ({ player }) => {
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm">
+      <div className="card bg-base-100 shadow-md">
         <figure>
-          <img className="w-full" src={player.profile_image} alt="Shoes" />
+          <img className="w-full h-80" src={player.profile_image} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">
@@ -36,7 +36,7 @@ const Card = ({ player }) => {
           </div>
           <div className="flex items-center justify-between">
             <p className="font-bold">{player.price}</p>
-            <button className="btn hover:btn-primary">Choose Player</button>
+            <button className="btn btn-soft btn-primary">Choose Player</button>
           </div>
         </div>
       </div>

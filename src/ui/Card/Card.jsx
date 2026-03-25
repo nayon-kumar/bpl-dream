@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { CiFlag1 } from "react-icons/ci";
 
 const Card = ({ player }) => {
+  const [isSelected, setIsSelected] = useState(false);
   return (
     <div>
-      <div className="card bg-base-100 shadow-md">
+      <div className="card bg-base-100 shadow-md hover:shadow-xl">
         <figure>
-          <img className="w-full h-80" src={player.profile_image} alt="Shoes" />
+          <img
+            className="w-full h-80 md:h-90"
+            src={player.profile_image}
+            alt={player.name}
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">
@@ -36,7 +41,13 @@ const Card = ({ player }) => {
           </div>
           <div className="flex items-center justify-between">
             <p className="font-bold">{player.price}</p>
-            <button className="btn btn-soft btn-primary">Choose Player</button>
+            <button
+              onClick={() => setIsSelected(true)}
+              disabled={isSelected ? true : false}
+              className="btn btn-soft btn-primary"
+            >
+              {isSelected ? "Selected" : "Choose Player"}
+            </button>
           </div>
         </div>
       </div>

@@ -1,9 +1,13 @@
 import React from "react";
+import Card from "../../../ui/Card/Card";
 
-const AvailablePlayers = () => {
+const AvailablePlayers = ({ data }) => {
+  console.log(data);
   return (
-    <div>
-      <p>Avalilable Players</p>
+    <div className="grid grid-cols-3 gap-5 mt-10">
+      {data.map((player, index) => (
+        <Card key={index} player={player} />
+      ))}
     </div>
   );
 };

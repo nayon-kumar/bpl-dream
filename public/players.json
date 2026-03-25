@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Virat Kohli",
+    "country": "India",
+    "player_type": "Batsman",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm medium",
+    "price": "15 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "player_type": "Batsman",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "price": "14 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/2.jpg"
+  },
+  {
+    "name": "Joe Root",
+    "country": "England",
+    "player_type": "Batsman",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "price": "13 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/3.jpg"
+  },
+  {
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "player_type": "Batsman",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm offbreak",
+    "price": "13 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/4.jpg"
+  },
+  {
+    "name": "Steve Smith",
+    "country": "Australia",
+    "player_type": "Batsman",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm legbreak",
+    "price": "14 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/5.jpg"
+  },
+  {
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "player_type": "All-rounder",
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Left-arm orthodox",
+    "price": "12 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/6.jpg"
+  },
+  {
+    "name": "Ben Stokes",
+    "country": "England",
+    "player_type": "All-rounder",
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Right-arm fast-medium",
+    "price": "16 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/7.jpg"
+  },
+  {
+    "name": "Hardik Pandya",
+    "country": "India",
+    "player_type": "All-rounder",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm fast-medium",
+    "price": "15 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/8.jpg"
+  },
+  {
+    "name": "Mitchell Starc",
+    "country": "Australia",
+    "player_type": "Bowler",
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Left-arm fast",
+    "price": "14 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/9.jpg"
+  },
+  {
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "player_type": "Bowler",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm fast",
+    "price": "16 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/10.jpg"
+  },
+  {
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "player_type": "Bowler",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Left-arm fast-medium",
+    "price": "13 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/11.jpg"
+  },
+  {
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "player_type": "Bowler",
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm legbreak",
+    "price": "15 Cr",
+    "profile_image": "https://randomuser.me/api/portraits/men/12.jpg"
+  }
+]

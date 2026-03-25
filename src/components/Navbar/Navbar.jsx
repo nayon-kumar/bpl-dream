@@ -5,7 +5,7 @@ import { HiCurrencyDollar } from "react-icons/hi";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({ price }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   useEffect(() => {
@@ -60,7 +60,8 @@ const Navbar = () => {
               Schedules
             </Link>
             <button className="btn btn-outline btn-primary">
-              0 Coin <HiCurrencyDollar className="text-[#E88102]" size={25} />
+              {price} Cr{" "}
+              <HiCurrencyDollar className="text-[#E88102]" size={25} />
             </button>
           </div>
         </div>

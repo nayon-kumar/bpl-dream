@@ -2,7 +2,7 @@ import React, { use, useState } from "react";
 import AvailablePlayers from "../Players/AvailablePlayers/AvailablePlayers";
 import SelectedPlayers from "../Players/SelectedPlayers/SelectedPlayers";
 
-const Players = ({ playerPromise }) => {
+const Players = ({ playerPromise, price, setPrice }) => {
   const data = use(playerPromise);
   const [available, setAvilable] = useState("available");
   return (
@@ -32,7 +32,7 @@ const Players = ({ playerPromise }) => {
       </div>
 
       {available === "available" ? (
-        <AvailablePlayers data={data} />
+        <AvailablePlayers data={data} price={price} setPrice={setPrice} />
       ) : (
         <SelectedPlayers />
       )}

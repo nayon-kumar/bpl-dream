@@ -11,7 +11,7 @@ const fetchPlayer = async () => {
 
 function App() {
   const playerPromise = fetchPlayer();
-  const [price, setPrice] = useState(120);
+  const [price, setPrice] = useState(100);
   return (
     <>
       <Navbar price={price} />

@@ -4,7 +4,11 @@ import SelectedPlayers from "../Players/SelectedPlayers/SelectedPlayers";
 
 const Players = ({ playerPromise, price, setPrice }) => {
   const data = use(playerPromise);
+
   const [available, setAvilable] = useState("available");
+
+  const [selectedPlayer, setSelectedPlayer] = useState([]);
+
   return (
     <div className="container mx-auto mt-15">
       <div className="flex flex-wrap gap-4 items-center justify-center sm:justify-between">
@@ -32,9 +36,18 @@ const Players = ({ playerPromise, price, setPrice }) => {
       </div>
 
       {available === "available" ? (
-        <AvailablePlayers data={data} price={price} setPrice={setPrice} />
+        <AvailablePlayers
+          selectedPlayer={selectedPlayer}
+          setSelectedPlayer={setSelectedPlayer}
+          data={data}
+          price={price}
+          setPrice={setPrice}
+        />
       ) : (
-        <SelectedPlayers />
+        <SelectedPlayers
+          selectedPlayer={selectedPlayer}
+          setSelectedPlayer={setSelectedPlayer}
+        />
       )}
     </div>
   );

@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { CiFlag1 } from "react-icons/ci";
 
-const Card = ({ player, price, setPrice }) => {
+const Card = ({
+  player,
+  price,
+  setPrice,
+  selectedPlayer,
+  setSelectedPlayer,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
   const handleClick = () => {
-    setIsSelected(true);
     const playerPrice = parseInt(player.price);
-    setPrice(price - playerPrice);
+    if (price - playerPrice >= 0) {
+      setPrice(price - playerPrice);
+      setIsSelected(true);
+      setSelectedPlayer([...selectedPlayer, player]);
+    } else {
+      alert("Less coin!");
+    }
   };
 
   return (

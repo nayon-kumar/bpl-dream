@@ -49,6 +49,8 @@ const Players = ({ playerPromise, price, setPrice }) => {
         <SelectedPlayers
           selectedPlayer={selectedPlayer}
           setSelectedPlayer={setSelectedPlayer}
+          price={price}
+          setPrice={setPrice}
         />
       )}
     </div>

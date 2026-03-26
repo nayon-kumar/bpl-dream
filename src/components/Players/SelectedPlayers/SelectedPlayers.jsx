@@ -1,14 +1,20 @@
 import React from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-const SelectedPlayers = ({ selectedPlayer, setSelectedPlayer }) => {
+const SelectedPlayers = ({
+  selectedPlayer,
+  setSelectedPlayer,
+  price,
+  setPrice,
+}) => {
   const deleteSelectedPlayer = (dPlayer) => {
+    const newPrice = price + parseInt(dPlayer.price);
+    setPrice(newPrice);
     setSelectedPlayer(
       selectedPlayer.filter((sPlayer) => sPlayer.name !== dPlayer.name),
     );
   };
 
-  console.log(selectedPlayer);
   return (
     <div className="mt-10 flex flex-col gap-4">
       {selectedPlayer.map((player, index) => {

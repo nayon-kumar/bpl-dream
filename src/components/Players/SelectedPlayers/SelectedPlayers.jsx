@@ -2,6 +2,12 @@ import React from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 const SelectedPlayers = ({ selectedPlayer, setSelectedPlayer }) => {
+  const deleteSelectedPlayer = (dPlayer) => {
+    setSelectedPlayer(
+      selectedPlayer.filter((sPlayer) => sPlayer.name !== dPlayer.name),
+    );
+  };
+
   console.log(selectedPlayer);
   return (
     <div className="mt-10 flex flex-col gap-4">
@@ -24,7 +30,10 @@ const SelectedPlayers = ({ selectedPlayer, setSelectedPlayer }) => {
                 <p className="text-[#131313]/60">{player.player_type}</p>
               </div>
             </div>
-            <div className="cursor-pointer">
+            <div
+              onClick={() => deleteSelectedPlayer(player)}
+              className="cursor-pointer"
+            >
               <RiDeleteBin6Line size={25} className="text-red-600" />
             </div>
           </div>

@@ -16,7 +16,9 @@ const Players = ({ playerPromise, price, setPrice }) => {
           {available === "available" ? (
             <h4 className="font-bold text-2xl">Available Players</h4>
           ) : (
-            <h4 className="font-bold text-2xl">Selected Player (4/6)</h4>
+            <h4 className="font-bold text-2xl">
+              Selected Player ({selectedPlayer.length}/{data.length})
+            </h4>
           )}
         </div>
         <div className="flex">
@@ -30,7 +32,7 @@ const Players = ({ playerPromise, price, setPrice }) => {
             onClick={() => setAvilable("selected")}
             className={`btn rounded-xl rounded-l-none ${available === "selected" ? "btn-primary" : ""}`}
           >
-            Selected (0)
+            Selected ({selectedPlayer.length})
           </button>
         </div>
       </div>

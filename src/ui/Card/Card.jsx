@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { CiFlag1 } from "react-icons/ci";
+import { toast } from "react-toastify";
 
 const Card = ({
   player,
@@ -13,11 +14,12 @@ const Card = ({
   const handleClick = () => {
     const playerPrice = parseInt(player.price);
     if (price - playerPrice >= 0) {
+      toast.success(`${player.name} selected!`);
       setPrice(price - playerPrice);
       setIsSelected(true);
       setSelectedPlayer([...selectedPlayer, player]);
     } else {
-      alert("Less coin!");
+      toast.error("Your balance is low!");
     }
   };
 

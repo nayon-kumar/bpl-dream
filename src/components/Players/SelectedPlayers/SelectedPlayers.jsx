@@ -1,5 +1,6 @@
 import React from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { toast } from "react-toastify";
 
 const SelectedPlayers = ({
   selectedPlayer,
@@ -8,6 +9,7 @@ const SelectedPlayers = ({
   setPrice,
 }) => {
   const deleteSelectedPlayer = (dPlayer) => {
+    toast.success(`${dPlayer.name} deleted!`);
     const newPrice = price + parseInt(dPlayer.price);
     setPrice(newPrice);
     setSelectedPlayer(

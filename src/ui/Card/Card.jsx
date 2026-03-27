@@ -51,7 +51,10 @@ const Card = ({
             </div>
             <hr className="my-4 text-gray-300" />
             <div>
-              <p className="font-bold mb-4">Rating</p>
+              <div className="mb-4 flex items-center justify-between">
+                <p className="font-bold">Rating</p>
+                <p className="text-right">{player.rating}</p>
+              </div>
               <div className="flex items-center justify-between">
                 <p className="font-bold">{player.batting_style}</p>
                 <p className="text-right">{player.bowling_style}</p>

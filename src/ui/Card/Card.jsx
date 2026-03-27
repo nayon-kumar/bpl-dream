@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { CiFlag1 } from "react-icons/ci";
 import { toast } from "react-toastify";
@@ -10,13 +9,14 @@ const Card = ({
   selectedPlayer,
   setSelectedPlayer,
 }) => {
-  const [isSelected, setIsSelected] = useState(false);
-  const handleClick = () => {
+  const isSelected = selectedPlayer.some((p) => p.name === player.name);
+
+  const handleClick = (e) => {
+    e.preventDefault();
     const playerPrice = parseInt(player.price);
     if (price - playerPrice >= 0) {
       toast.success(`${player.name} selected!`);
       setPrice(price - playerPrice);
-      setIsSelected(true);
       setSelectedPlayer([...selectedPlayer, player]);
     } else {
       toast.error("Your balance is low!");
@@ -61,8 +61,9 @@ const Card = ({
           <div className="flex items-center justify-between">
             <p className="font-bold">{player.price} Cr</p>
             <button
+              type="button"
               onClick={handleClick}
-              disabled={isSelected ? true : false}
+              disabled={isSelected}
               className="btn btn-soft btn-primary"
             >
               {isSelected ? "Selected" : "Choose Player"}

@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
@@ -11,7 +11,7 @@ const fetchPlayer = async () => {
 };
 
 function App() {
-  const playerPromise = fetchPlayer();
+  const playerPromise = useMemo(() => fetchPlayer(), []);
   const [price, setPrice] = useState(100);
   return (
     <>

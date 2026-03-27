@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Navbar price={price} />
-      <Banner />
+      <Banner price={price} setPrice={setPrice} />
       <Suspense>
         <Players
           playerPromise={playerPromise}

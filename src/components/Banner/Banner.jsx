@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import bannerImage from "../../assets/BPL/banner-main.png";
 import backgorundImage from "../../assets/BPL/bg-shadow.png";
+import { toast } from "react-toastify";
 
-const Banner = () => {
+const Banner = ({ price, setPrice }) => {
+  const [isClimed, setIsClimed] = useState(false);
+  const handleClick = () => {
+    if (isClimed) {
+      toast.error("Offer is already climed!");
+      return;
+    }
+    toast.success("Offer climed successfully!");
+    setIsClimed(true);
+    setPrice(price + 20);
+  };
+
   return (
     <div className="mt-6">
       <div
@@ -18,7 +30,10 @@ const Banner = () => {
             Beyond Boundaries Beyond Limits
           </p>
           <div className="border-2 inline px-1 rounded-xl py-5 border-[#E7FE29] cursor-pointer">
-            <button className="bg-[#E7FE29] text-[#131313 px-5 py-3.5 rounded-xl font-bold cursor-pointer">
+            <button
+              onClick={() => handleClick()}
+              className="bg-[#E7FE29] text-[#131313 px-5 py-3.5 rounded-xl font-bold cursor-pointer"
+            >
               Claim Free Credit
             </button>
           </div>

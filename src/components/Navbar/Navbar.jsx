@@ -22,7 +22,7 @@ const Navbar = ({ price }) => {
   }, []);
 
   return (
-    <div className="fixed z-10 w-full">
+    <div className="fixed z-20 w-full">
       <div className="relative" ref={menuRef}>
         <div className="flex justify-baseline gap-2 sm:justify-between bg-base-100 shadow-sm px-3 py-2">
           <div

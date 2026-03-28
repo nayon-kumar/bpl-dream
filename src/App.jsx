@@ -4,6 +4,7 @@ import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Players from "./components/Players/Players";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer/Footer";
 
 const fetchPlayer = async () => {
   const res = await fetch("/players.json");
@@ -24,6 +25,7 @@ function App() {
           setPrice={setPrice}
         />
       </Suspense>
+      <Footer />
       {/* React toastify */}
       <ToastContainer />
     </>

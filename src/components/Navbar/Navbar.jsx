@@ -67,7 +67,7 @@ const Navbar = ({ price }) => {
         </div>
         {isOpen ? (
           <>
-            <div className="absolute top-18 left-0 bg-white">
+            <div className="absolute top-20 left-0 bg-white">
               <div className="flex flex-col">
                 <Link
                   onClick={() => setIsOpen(false)}

@@ -11,7 +11,7 @@ const Players = ({ playerPromise, price, setPrice }) => {
 
   return (
     <div className="container mx-auto mt-15">
-      <div className="flex flex-wrap gap-4 items-center justify-center sm:justify-between">
+      <div className="flex flex-wrap gap-4 items-center justify-center sm:justify-between sticky top-18 z-10 bg-white py-2">
         <div>
           {available === "available" ? (
             <h4 className="font-bold text-2xl">Available Players</h4>

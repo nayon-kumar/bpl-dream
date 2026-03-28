@@ -3,7 +3,7 @@ import backgorundImage from "../../../assets/BPL/bg-shadow.png";
 
 const FooterCard = () => {
   return (
-    <div className="border-2 rounded-2xl border-white p-5 container mx-auto absolute -top-1/2 left-1/2 -translate-x-1/2">
+    <div className="border-2 rounded-2xl border-white p-5 container mx-auto absolute -top-50 left-1/2 -translate-x-1/2">
       <div
         className="text-center bg-white bg-cover bg-center bg-no-repeat rounded-2xl h-84 flex items-center justify-center"
         style={{ backgroundImage: `url(${backgorundImage})` }}

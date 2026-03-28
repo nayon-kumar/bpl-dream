@@ -8,7 +8,7 @@ const SelectedPlayers = ({
   setPrice,
 }) => {
   return (
-    <div className="mt-10 flex flex-col gap-4">
+    <div className="mt-10 flex flex-col gap-4 px-3">
       {selectedPlayer.length === 0 ? (
         <div className="text-center">
           <h3 className="text-xl text-gray-500">No player selected yet</h3>

@@ -98,7 +98,7 @@ const Navbar = ({ price }) => {
                   Schedules
                 </Link>
                 <button className="btn">
-                  0 Coin{" "}
+                  {price} Cr{" "}
                   <HiCurrencyDollar className="text-[#E88102]" size={25} />
                 </button>
               </div>

@@ -9,7 +9,7 @@ const Footer = () => {
       <FooterCard />
       <FooterLinks />
       <hr className="text-gray-200 mt-8" />
-      <p className="text-center text-[#FFFFFF]/60 mt-4">
+      <p className="text-center text-[#FFFFFF]/60 mt-4 mx-3">
         @2026 Your Company All Rights Reserved.
       </p>
     </footer>

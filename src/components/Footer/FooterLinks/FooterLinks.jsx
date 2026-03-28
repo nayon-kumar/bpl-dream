@@ -7,7 +7,7 @@ const FooterLinks = () => {
       <div className="text-center">
         <img className="mx-auto" src={logo} alt="Logo" />
       </div>
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center text-center sm:text-left">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center text-center sm:text-left px-3">
         <div>
           <h4 className="text-white font-bold mb-4 mt-4 sm:mt-0">About Us</h4>
           <p className="text-white/60">

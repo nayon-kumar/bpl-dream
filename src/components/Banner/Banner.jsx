@@ -16,7 +16,7 @@ const Banner = ({ price, setPrice }) => {
   };
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 px-3">
       <div
         style={{ backgroundImage: `url(${backgorundImage})` }}
         className="bg-cover bg-center bg-no-repeat rounded-2xl bg-[#131313] container mx-auto text-center h-135 flex items-center justify-center px-5"

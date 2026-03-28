@@ -25,7 +25,7 @@ const Card = ({
 
   return (
     <div>
-      <div className="card bg-base-100 shadow-md hover:shadow-xl">
+      <div className="card mx-3 bg-base-100 shadow-md hover:shadow-xl">
         <figure>
           <img
             className="w-full h-80 md:h-90"

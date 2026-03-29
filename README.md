@@ -1,16 +1,80 @@
-# React + Vite
+# 🏏Cricket Team Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To show the live demo <a href="https://bpl-dream-three.vercel.app/">Click Here</a>
 
-Currently, two official plugins are available:
+The **Cricket Team Builder** is an interactive React application that allows users to **build their own cricket team** by selecting players within a limited budget.  
+It simulates a real fantasy sports experience with **player selection, budget management, and dynamic UI updates**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Technologies Used
 
-## React Compiler
+- **React.js** – Frontend framework
+- **JavaScript (ES6+)** – Logic & state handling
+- **Tailwind CSS** – Styling
+- **DaisyUI** – UI components
+- **React Toastify** – Notifications
+- **React Icons** – Icons
+- **React Router DOM** – Navigation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- View all available cricket players
+- Select players to build your team
+- Budget system (credits) for player selection
+- Prevent selecting players when balance is low
+- Prevent duplicate player selection
+- Remove selected players and refund credits
+- Toggle between **Available Players** and **Selected Players**
+- Claim free credit (one-time only)
+- Toast notifications for actions (success/error)
+- Fully responsive design (mobile + desktop)
+- Sticky header for better UX
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 How It Works
+
+### 💰 Credit System
+
+- User starts with **100 credits**
+- Each player has a price
+- Selecting a player deducts credits
+- Removing a player refunds credits
+
+---
+
+### 🎁 Free Credit Feature
+
+- User can claim **+20 credits**
+- Works **only once**
+- Shows toast message if already claimed
+
+---
+
+### 👥 Player Selection
+
+- Click **"Choose Player"** to add player
+- Button becomes **disabled after selection**
+- Prevents duplicate selection
+
+---
+
+### ❌ Remove Player
+
+- Click delete icon in selected list
+- Player is removed
+- Credits are refunded
+
+---
+
+### 🔄 Toggle View
+
+- Switch between:
+  - **Available Players**
+  - **Selected Players**
+
+---
+
+### 🔔 Notifications
+
+- Uses **React Toastify**
+- Shows:
+  - Success (player added/removed)
+  - Error (low balance / duplicate action)
